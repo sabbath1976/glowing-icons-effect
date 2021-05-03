@@ -1,0 +1,78 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+ul {
+    background: #000;
+    width: 50rem;
+    margin: 5rem;
+    padding: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+/* list */
+ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 4rem;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
+/* label */
+ul li label {
+    position: relative;
+}
+
+/* checkbox */
+ul li label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* icon container */
+.icon-container {
+    background: #777;
+    width: 10rem;
+    height: 10rem;
+    border: 0.3rem solid transparent;
+    transition: all 0.45s ease-in-out;
+}
+
+/* icon */
+.icon-container i {
+    font-size: 4rem;
+    padding: 3rem;
+    color: #00f;
+    transition: all 0.45s ease-in-out;
+}
+
+/* when icon container is clicked */
+ul li label input[type="checkbox"]:checked + .icon-container {
+    border: 0.3rem solid #fff;
+    box-shadow: 0 0 1rem rgba(126, 252, 0, 0.507),
+        0 0 2rem rgba(126, 252, 0, 0.507), 0 0 3rem rgba(126, 252, 0, 0.507),
+        inset 0 0 1rem rgba(126, 252, 0, 0.507);
+}
+
+/* when icon is clicked */
+ul li label input[type="checkbox"]:checked + .icon-container i {
+    color: #fff;
+    text-shadow: 0 0 1rem rgba(126, 252, 0, 0.507),
+        0 0 2rem rgba(126, 252, 0, 0.507);
+}
